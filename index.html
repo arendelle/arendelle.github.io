@@ -19,23 +19,37 @@
     <link rel="shortcut icon" href="./public/favicon.ico">
 
     <style type="text/css">
-      #wrap {
-         width:38rem;
-         margin:0 auto;
-      }
-      #left_col {
-         float:left;
-         width:280px;
-      }
-      #right_col {
-         float:left;
-         width:300px;
-      }
+      #wrap { width:100%; margin:0 auto; }
+      #left_col { float:left; width:14rem; }
+      #right_col { float:left; width:11.4rem; }
     </style>
+
+    <script type="text/javascript">
+      // Enables responsitive view for some of the floating tags
+      function sizeFixer () {
+        // Fixes "It's The Easiest, Most Fun "
+        if ( document.getElementById("easy").offsetWidth < 720 ) {
+          document.getElementById("easyText").style.width = "100%";
+          document.getElementById("easyCodeBlock").style.width = "100%";
+          document.getElementById("easyText").style.clear = "both";
+          document.getElementById("easyCodeBlock").style.clear = "both";
+          document.getElementById("easyImg").style.width = "97%";
+          document.getElementById("easyDiv").innerHTML = "<br><br><br><br><br><br>";
+
+        } else {
+          document.getElementById("easyText").style.width = "55%";
+          document.getElementById("easyCodeBlock").style.width = "41%";
+          document.getElementById("easyText").style.clear = "none";
+          document.getElementById("easyCodeBlock").style.clear = "none";
+          document.getElementById("easyImg").style.width = "90%";
+          document.getElementById("easyDiv").innerHTML = "<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>";
+        }
+      }
+    </script>
 
   </head>
   
-  <body>
+  <body onload="sizeFixer()" onresize="sizeFixer()" id="body">
 
     <!-- Header Image -->
     <div style="width:100vw; margin:0px;">
@@ -44,42 +58,59 @@
 
     <!-- PAGE'S START -->
     <div class="container content">
-      <br>
+      <br><br><br>
 
       <!-- A Joy You Deserve To Experience -->
-      <img src="Graphics/joyYouNeed.png"><hr>
-      <p>Programmers love their job more than any other industry. Programmer are the only job with a fully developed culture. This is because programmers “program”. Developing a software is one of the coolest joys you may ever experience! However programming languages and tools used to create software are scary, hard and confusing to all of us.<br><br>Arendelle is a new programming language with it’s own environment. By redefining, redesigning, merging and removing element of a modern programming language Arendelle is the cleanest, easiest, most beautiful beautiful, programming language. Using Arendelle you create pixel based arts while you learn how coding works. Which as what we see many times a day, You’ll be to excited about!<br><br>Arendelle is beloved language! Even before releasing the language we have received so many great feedbacks like how Marc-André Cournoyer, author of one of the most famous books on creating programming languages says:<br><br>
+      <img src="Graphics/joyYouNeed2.png"><hr>
+      <p>Programmers love their job more than any other industry. Programming is the only job with a fully developed culture. This is because programmers “program”. Developing a software is one of the coolest joys you may ever experience! However programming languages and tools used to create software are scary, hard and confusing to all of us at the beginning and it’s why many people miss learning it.<br><br>Arendelle is a new programming language with it’s own environment. By redefining, redesigning, merging and removing elements of a modern programming language, Arendelle is the cleanest, easiest, most beautiful, programming language. Using Arendelle you create pixel based arts while you learn how coding works which as what we see many times a day, You’ll be to excited and proud about!<br><br>Arendelle is a beloved language! Even before releasing the language we have received so many great feedbacks like how Marc-André Cournoyer, author of one of the most famous books on creating programming languages says:<br><br>
       
       <img src="Graphics/amazingLanguage.png" width="583px">
 
-      We can talk hours about why Arendelle is awesome and why you should have it, However we believe it’s better if you try it and understand it’s beauty </p><br>
+      We can talk hours about why Arendelle is awesome and why you should have it, But well it's spoiling Arendelle! It's cooler if you discover it on your own!</p><br>
 
       <!-- Download / Learn Buttons -->
-      <div id="wrap">
+      <div id="wrap" style="clear:both;">
         <div id="left_col">
-            <a href="http://web.arendelle.org/download/" title="Download Arendelle"><img src="Graphics/downloadArendelle.png" style="width:265px;"></a>
+            <a href="http://web.arendelle.org/download/" title="Download Arendelle"><img src="Graphics/downloadArendelle.png" style="width:97%;"></a>
         </div>
         <div id="right_col">
-            <a href="http://book.arendelle.org" title="Learn Arendelle"><img src="Graphics/learnArendelelButton.png" style="width:217px;"></a>
+            <a href="http://book.arendelle.org" title="Learn Arendelle"><img src="Graphics/learnArendelelButton.png" style="width:97%;"></a>
         </div>
-        <div style="clear:both;"><br><br><br><br><br><br><br><br></div>
+        <div style="clear:both;"><br><br><br><br><br><br><br></div>
       </div>
 
-      
+      <!-- How does it work? --> 
+      <img src="Graphics/howDoesItWork.png">
+    </div>
+
+    <!-- Happy and Birdy -->
+    <div style="width:100%; margin:0px;">
+      <img src="Graphics/happyAndBirdy.png" style="width:100%;">
+    </div>
+
+    <div class="container content" style="clear:both;">
+      <p>In Arendelle you use big pixels called <strong>dots</strong> to create graphics. You do this by moving the <strong>pointers</strong> which is something like your computer mouse. Using programming features you move it through the screen and then you paint where you want but. Now with rich programming features of Arendelle you can program your processes and make mind blowing things you can't even imagine</p><br><br><br><br>
+
       <!-- It's the easiest, most fun -->
-      <img src="Graphics/easiest.png" style="clear:both;"><hr>
-      <div id="wrap" style="clear:both;"> 
-        <div style="float:left; width:56%; margin:2%;">
-          <p>Arendelle is designed to be a very simple language, Each of it’s commands are one character, It’s grammars are simple, short and to the point. In short with less than 4 lines of code you can create something like this:</p><br>
-          <img src="Graphics/rand.png" width="90%"><br>
-          <p>This codes may look strange but as soon as you learn them you understand why they are the most simple codes you can ever write!<br><br>
+      <br><br><br>
+      <img src="Graphics/easiest.png"><hr>
+      <div style="clear:both;" id="easy"> 
+        <div style="float:left; margin:2%;" id="easyText">
+          <p>Arendelle is designed to be a very simple language, Each of it’s commands are one character, It’s grammars are simple, short and to the point. In short with less than 4 lines of code you can create something this cool</p><br>
+
+          <img src="Graphics/rand.png" width="90%" id="easyImg"><br>
+
+          <p>This codes may look strange but as soon as you learn them you'll understand why they are the most simple codes you can ever write!<br><br>
+
           <a href="http://book.arendelle.org">Lean Arendelle by Ease!</a></p>
         </div>
-        <div style="float:left; width:40%;">
+        <div style="float:left;" id="easyCodeBlock">
+
           <!-- CLIFF HIGHLIGHTER 0.02 DEV GENERATED CODE BLOCK-->
           <pre style="font-family: Monospace;"><span style="color:#A0A0A0">//&nbsp;doing&nbsp;for&nbsp;1000&nbsp;times</span><br>&nbsp;&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;<span style="color:#D60073">[</span>&nbsp;1000&nbsp;<span style="color:#D60073">,</span><br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;i&nbsp;<span style="color:#D60073">[</span>&nbsp;<span style="color:#4E00FC">#rnd</span>&nbsp;*&nbsp;<span style="color:#4E00FC">#i</span>&nbsp;<span style="color:#D60073">,</span>&nbsp;r&nbsp;<span style="color:#D60073">]</span><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#D60073">[</span>&nbsp;<span style="color:#4E00FC">#rnd</span>&nbsp;*&nbsp;<span style="color:#4E00FC">#j</span>&nbsp;<span style="color:#D60073">,</span>&nbsp;d&nbsp;<span style="color:#D60073">]</span>&nbsp;pn<br><br>&nbsp;&nbsp;&nbsp;<span style="color:#D60073">]</span><br><br><span style="color:#A0A0A0">//&nbsp;done</span><br></pre>
           <!-- CLIFF HIGHLIGHTER 0.02 DEV GENERATED CODE BLOCK-->
-          <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+          
+          <p id="easyDiv"></p>
         </div>
       </div>
     </div>
@@ -93,7 +124,7 @@
 
 
     <!-- Android Phones -->
-    <div style="width:100vw; margin:0px;">
+    <div style="width:100%; margin:0px;">
       <img src="Graphics/scroll3.png" style="width:100%;">
     </div><br><br><br><br><br><br><br>
 
@@ -105,46 +136,47 @@
       <p>The main reason why Arendelle was invented was creating a LEGO tool/toy like system for creative people to play with creation. In order to make Arendelle a first-class language for creativity many careful designs have been done. For example, limits and restrictions make people be more creative. Arendelle is designed with some limits on purpose. You get only 5 colors. This may seem a bit strange but the 5 colors of Arendelle is one of it’s core characteristics. We ship Arendelle with a very rich set of built in mathematical functions. However many of the things you get in Arendelle are limited. To push the walls you have to code yourself. We always say that there is no language as creative as Arendelle but also is designed to make it’s users more creative than ever!</p>
       
 
-      <!-- It's Free, It's Open -->
-      <br><br><br><br>
-      <img src="Graphics/freeOpen.png">
+      <!-- Get Involved -->
+      <br><br><br><br><br><br>
+      <img src="Graphics/freeOpen.png"><hr>
+      <p>Languages are stuff that you own them when you know them. English is owned by the people who knows it. We believe in Arendelle as a way to share love not to sell a product and that's why we don’t see it, We share it open source so everyone who loves it be able to develop it.<br><br>Arendelle is a community based project and everyone is welcome help us make it even better. If you feel like you can help us Develop, Translate and Share it you can become an Arendelle Engineer and help us make an amazing move even better! To join us please visit our <a href="./developer/index.html">Developer Center</a></p><br><br><br><br><br>
+
+      <img src="Graphics/downloadTitle.png"><hr>
+      <p>To understand all of these, All you have to do is to try Arendelle! It's a great language and ensure you that you'll mail us about your happy stories with it!</p><br>
+      <!-- Download / Learn Buttons -->
+      <div id="wrap" style="clear:both;">
+        <div id="left_col">
+            <a href="http://web.arendelle.org/download/" title="Download Arendelle"><img src="Graphics/downloadArendelle.png" style="width:97%;"></a>
+        </div>
+        <div id="right_col">
+            <a href="http://book.arendelle.org" title="Learn Arendelle"><img src="Graphics/learnArendelelButton.png" style="width:97%;"></a>
+        </div>
+        <div style="clear:both;"><br><br><br><br><br><br><br><br></div>
+      </div>
     </div>
 
-    <!--center>
-    <div style="width:800px; margin:0 auto;">
-      <div>
-        <div style="float:left; width:400px;">
-            <a href="./developer/index.html" title="Arendelle Developer Center"><img src="Graphics/developerBanner.png" style="height:150px;"></a>
+
+    <center>
+      <div style="width:760px;">
+
+        <div id="wrap" style="clear:both;">
+        <div style="float:left; width:18rem;">
+            <a href="http://web.arendelle.org/download/" title="Download Arendelle"><img src="Graphics/360-developerButton.png" style="width:97%;"></a>
         </div>
-        <div style="float:right; width:200px;">
-            <a href="http://book.arendelle.org/teach" title="Teach Arendelle"><img src="Graphics/teachBanner.png" style="height:150px;"></a>
+        <div style="float:left; width:9rem;">
+            <a href="http://web.arendelle.org/download/" title="Download Arendelle"><img src="Graphics/180-teachArendelle.png" style="width:97%;"></a>
         </div>
-        <div style="float:right; width:200px;">
-            <a href="http://book.arendelle.org" title="Learn Arendelle"><img src="Graphics/appsBanner.png" style="height:150px;"></a>
+        <div style="float:left; width:9rem;">
+            <a href="http://web.arendelle.org/download/" title="Download Arendelle"><img src="Graphics/180-readOursTORY.png" style="width:97%;"></a>
         </div>
         <div style="clear:both;"></div>
       </div>
-    </div>
-    </center-->
-
-    <div class="container content">
-      <p>Languages are stuff you own them when you know them. English is owned by the people who knows it. We believe in Arendelle as a ways to share love not to sell a product and thats why we don’t see it, And we share it open source so everyone who loves it be able to develop it.<br><br>Arendelle is a community based project and everyone is welcome help us make it even better. If you feel like you can help us Develop, Translate and Share it you can become an Arendelle Engineer and help us make an amazing move even better! To join us please visit our <a href="./developer/index.html">Developer Center</a></p><br><br><br><br><br>
-
-      <img src="Graphics/downloadTitle.png"><hr>
-      <p>To understand all of these, All you have to do is to try Arendelle! It's a great language and ensure you that you'll mail us about your happy stories with it!</p>
-      <!-- Download / Learn Buttons -->
-      <div id="wrap">
-        <div id="left_col">
-            <a href="http://web.arendelle.org/download/" title="Download Arendelle"><img src="Graphics/downloadArendelle.png" style="width:265px;"></a>
-        </div>
-        <div id="right_col">
-            <a href="http://book.arendelle.org" title="Learn Arendelle"><img src="Graphics/learnArendelelButton.png" style="width:217px;"></a>
-        </div>
-        <div style="clear:both;"><br><br><br><br><br></div>
       </div>
+    </center>
 
+    <div class="container content" style="clear:both;">
     <!-- FOOTER -->
-      <a href="legal/copyright.html">Copyright</a> &middot; <a href="legal/privacy.html">Privacy Policy</a> &middot; <a href="legal/opensource">License and Legal</a><br>
+      <a href="legal/copyright.html">Copyright</a> &middot; <a href="legal/privacy.html">Privacy Policy</a> &middot; <a href="legal/index.html">Arendelle Lagal</a><br><hr>
       <small>&copy; Copyright 2015 <a href="http://kary.us">Pouya Kary</a> and <a href="https://github.com/DeerMichel">Micha Hanselmann</a>, All rights reserved.</small>
     </div><br>
     <!-- FOOTER -->
