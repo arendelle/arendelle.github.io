@@ -44,6 +44,18 @@
           document.getElementById("easyImg").style.width = "90%";
           document.getElementById("easyDiv").innerHTML = "<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>";
         }
+
+        if ( document.getElementById("body").offsetWidth < 800 ) {
+          document.getElementById("footerBox").style.width = "100%";
+          document.getElementById("footerBox1").style.width = "50%";
+          document.getElementById("footerBox2").style.width = "25%";
+          document.getElementById("footerBox3").style.width = "25%";
+        } else {
+          document.getElementById("footerBox").style.width = "40rem";
+          document.getElementById("footerBox1").style.width = "20rem";
+          document.getElementById("footerBox2").style.width = "10rem";
+          document.getElementById("footerBox3").style.width = "10rem";
+        }
       }
     </script>
 
@@ -156,23 +168,22 @@
     </div>
 
 
-    <center>
-      <div style="width:760px;">
-
+    <center><div align="center">
+      <div style="width:760px;" id="footerBox">
         <div id="wrap" style="clear:both;">
-        <div style="float:left; width:18rem;">
-            <a href="http://web.arendelle.org/download/" title="Download Arendelle"><img src="Graphics/360-developerButton.png" style="width:97%;"></a>
+          <div style="float:left; width:18rem;" id="footerBox1">
+            <a href="http://web.arendelle.org/developer/" title="Arendelle Developer Center"><img src="Graphics/360-developerButton.png" style="width:97%;"></a>
+          </div>
+          <div style="float:left; width:9rem;" id="footerBox2">
+            <a href="http://web.arendelle.org/teach/" title="Teach Arendelle"><img src="Graphics/180-teachArendelle.png" style="width:97%;"></a>
+          </div>
+          <div style="float:left; width:9rem;" id="footerBox3">
+            <a href="http://web.arendelle.org/story/" title="Read Our Story"><img src="Graphics/180-readOursTORY.png" style="width:97%;"></a>
+          </div>
+          <div style="clear:both;"></div>
         </div>
-        <div style="float:left; width:9rem;">
-            <a href="http://web.arendelle.org/download/" title="Download Arendelle"><img src="Graphics/180-teachArendelle.png" style="width:97%;"></a>
-        </div>
-        <div style="float:left; width:9rem;">
-            <a href="http://web.arendelle.org/download/" title="Download Arendelle"><img src="Graphics/180-readOursTORY.png" style="width:97%;"></a>
-        </div>
-        <div style="clear:both;"></div>
       </div>
-      </div>
-    </center>
+    </div></center>
 
     <div class="container content" style="clear:both;">
     <!-- FOOTER -->
