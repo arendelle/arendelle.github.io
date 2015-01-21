@@ -3,6 +3,12 @@
 
     <head>
     <meta charset="UTF-8">
+
+    <!-- SEO -->
+    <meta name="keywords" content="Arendelle, Arendelle Language, Pouya Kary, Micha Hanselmann" />
+    <meta name="description" content="Homepage of Arendelle Language; A fun new langauge for you to discover the great world of programming!" />
+    <meta http-equiv="content-language" content="en" />
+
     <link href="http://gmpg.org/xfn/11" rel="profile">
   
     <!-- Enable responsiveness on mobile devices-->
@@ -27,26 +33,31 @@
     <script type="text/javascript">
       // Enables responsitive view for some of the floating tags
       function sizeFixer () {
-        // Fixes "It's The Easiest, Most Fun "
+        // Fixes "It's The Easiest, Most Fun"
         if ( document.getElementById("easy").offsetWidth < 720 ) {
           document.getElementById("easyText").style.width = "100%";
           document.getElementById("easyCodeBlock").style.width = "100%";
           document.getElementById("easyText").style.clear = "both";
           document.getElementById("easyCodeBlock").style.clear = "both";
-          document.getElementById("easyImg").style.width = "97%";
+          document.getElementById("easyImg").style.height = "90%";
           document.getElementById("easyDiv").innerHTML = "<br><br><br><br><br><br>";
-
         } else {
           document.getElementById("easyText").style.width = "55%";
           document.getElementById("easyCodeBlock").style.width = "41%";
           document.getElementById("easyText").style.clear = "none";
           document.getElementById("easyCodeBlock").style.clear = "none";
-          document.getElementById("easyImg").style.width = "90%";
-          document.getElementById("easyDiv").innerHTML = "<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>";
+          document.getElementById("easyImg").style.width = "92%";
+          document.getElementById("easyDiv").innerHTML = "<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>";
         }
 
-        if ( document.getElementById("body").offsetWidth < 800 ) {
-          document.getElementById("footerBox").style.width = "100%";
+        // Fixes Footer Buttons
+        if (document.getElementById("body").offsetWidth < 450 ) {
+          document.getElementById("footerBox").style.width = "90%";
+          document.getElementById("footerBox1").style.width = "100%";
+          document.getElementById("footerBox2").style.width = "50%";
+          document.getElementById("footerBox3").style.width = "50%";
+        } else if ( document.getElementById("body").offsetWidth < 800 ) {
+          document.getElementById("footerBox").style.width = "95%";
           document.getElementById("footerBox1").style.width = "50%";
           document.getElementById("footerBox2").style.width = "25%";
           document.getElementById("footerBox3").style.width = "25%";
@@ -82,9 +93,11 @@
 
       <!-- Download / Learn Buttons -->
       <div id="wrap" style="clear:both;">
+        <!-- Download Arendelle -->
         <div id="left_col">
             <a href="http://web.arendelle.org/download/" title="Download Arendelle"><img src="Graphics/downloadArendelle.png" style="width:97%;"></a>
         </div>
+        <!-- Learn Arendelle -->
         <div id="right_col">
             <a href="http://book.arendelle.org" title="Learn Arendelle"><img src="Graphics/learnArendelelButton.png" style="width:97%;"></a>
         </div>
@@ -108,9 +121,9 @@
       <img src="Graphics/easiest.png"><hr>
       <div style="clear:both;" id="easy"> 
         <div style="float:left; margin:2%;" id="easyText">
-          <p>Arendelle is designed to be a very simple language, Each of it’s commands are one character, It’s grammars are simple, short and to the point. In short with less than 4 lines of code you can create something this cool</p><br>
+          <p>Arendelle is designed to be a very simple language, Each of it’s commands are one character, It’s grammars are simple, short and to the point. In short with less than four lines of code you can create things like this</p><br>
 
-          <img src="Graphics/rand.png" width="90%" id="easyImg"><br>
+          <img src="Graphics/rand.png" width="90%" id="easyImg" align><br>
 
           <p>This codes may look strange but as soon as you learn them you'll understand why they are the most simple codes you can ever write!<br><br>
 
@@ -153,13 +166,17 @@
       <img src="Graphics/freeOpen.png"><hr>
       <p>Languages are stuff that you own them when you know them. English is owned by the people who knows it. We believe in Arendelle as a way to share love not to sell a product and that's why we don’t see it, We share it open source so everyone who loves it be able to develop it.<br><br>Arendelle is a community based project and everyone is welcome help us make it even better. If you feel like you can help us Develop, Translate and Share it you can become an Arendelle Engineer and help us make an amazing move even better! To join us please visit our <a href="./developer/index.html">Developer Center</a></p><br><br><br><br><br>
 
+      <!-- You know enough! So it's try time -->
       <img src="Graphics/downloadTitle.png"><hr>
       <p>To understand all of these, All you have to do is to try Arendelle! It's a great language and ensure you that you'll mail us about your happy stories with it!</p><br>
+
       <!-- Download / Learn Buttons -->
       <div id="wrap" style="clear:both;">
+        <!-- Download Arendelle -->
         <div id="left_col">
             <a href="http://web.arendelle.org/download/" title="Download Arendelle"><img src="Graphics/downloadArendelle.png" style="width:97%;"></a>
         </div>
+        <!-- Learn Arendelle -->
         <div id="right_col">
             <a href="http://book.arendelle.org" title="Learn Arendelle"><img src="Graphics/learnArendelelButton.png" style="width:97%;"></a>
         </div>
@@ -168,31 +185,41 @@
     </div>
 
 
+    <!--  Footer Buttons -->
+    <h3 id="disp"></h3>
     <center><div align="center">
       <div style="width:760px;" id="footerBox">
-        <div id="wrap" style="clear:both;">
-          <div style="float:left; width:18rem;" id="footerBox1">
+        <div id="wrap">
+          <!-- Developer -->
+          <div style="float:left; width:50%;" id="footerBox1">
             <a href="http://web.arendelle.org/developer/" title="Arendelle Developer Center"><img src="Graphics/360-developerButton.png" style="width:97%;"></a>
           </div>
-          <div style="float:left; width:9rem;" id="footerBox2">
-            <a href="http://web.arendelle.org/teach/" title="Teach Arendelle"><img src="Graphics/180-teachArendelle.png" style="width:97%;"></a>
+          <!-- Teach Arendelle -->
+          <div style="float:left; width:25%;" id="footerBox2">
+            <a href="http://web.arendelle.org/education/" title="Manifesto: A Whole New Education"><img src="Graphics/180-teachArendelle.png" style="width:97%;"></a>
           </div>
-          <div style="float:left; width:9rem;" id="footerBox3">
+          <!-- Read Our Story -->
+          <div style="float:left; width:25%;" id="footerBox3">
             <a href="http://web.arendelle.org/story/" title="Read Our Story"><img src="Graphics/180-readOursTORY.png" style="width:97%;"></a>
           </div>
-          <div style="clear:both;"></div>
         </div>
       </div>
     </div></center>
 
-    <div class="container content" style="clear:both;"><hr>
+
     <!-- FOOTER -->
+    <div class="container content" style="clear:both;"><hr>
       <a href="legal/copyright.html">Copyright</a> &middot; <a href="legal/privacy.html">Privacy Policy</a> &middot; <a href="legal/index.html">Arendelle Lagal</a><br>
       <small>&copy; Copyright 2015 <a href="http://kary.us">Pouya Kary</a> and <a href="https://github.com/DeerMichel">Micha Hanselmann</a>, All rights reserved.</small>
     </div><br>
     <!-- FOOTER -->
 
-    
     <!-- PAGE'S END -->
+
   </body>
 </html>
+
+<!-- Copyright 2015 Pouya Kary, http://web.arendelle.org/legal/copyright/index.html -->
+
+
+
