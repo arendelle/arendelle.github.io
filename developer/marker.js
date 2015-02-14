@@ -9,7 +9,7 @@
 // INFO
 //
 
-var version = '0.006';
+var version = '0.007';
 
 
 
@@ -101,15 +101,15 @@ function highlight (text) {
 
 				while ( i < text.length && while_control_6 ) {
 
-					if ( text[ i ] == ')' || text[ i ] == ',' ) {
+					if ( text[ i ] == ')' || text[ i ] == ',' || text[ i ] == '[' ) {
 
-						if ( /[a-zA-Z0-9]/g.test( space_init_string ) ) {
+						if ( /^[a-zA-Z0-9 ]+$/.test( space_init_string ) ) {
 
 							result += start + data_color + middle + space_init_string + end;
 							
 						} else {
 
-							result += start + data_color + middle + "12" + end;
+							result += highlight( space_init_string );
 
 						}
 
