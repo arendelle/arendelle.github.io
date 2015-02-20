@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+
+<!-- Marker.js Interface. Copyright 2015 Pouya Kary -->
+<!-- To be avialable as http://marker.arendelle.org -->
+
+<html>
+<head>
+	<meta charset="UTF-8">
+
+	<!-- SEO -->
+    <meta name="keywords" content="Marker, Highlighting Arendelle, Arendelle Highlighter, Highlighter, Arendelle, Arendelle Language, Pouya Kary, Micha Hanselmann" />
+    <meta name="description" content="Marker highlights Arendelle codes using marker.js" />
+    <meta http-equiv="content-language" content="en" />
+
+    <style type="text/css">
+    	::-webkit-scrollbar {  
+    		width: 6px; height: 6px;
+		}  
+		::-webkit-scrollbar-track {  
+    		background-color: #fff;  
+		}  
+		::-webkit-scrollbar-thumb {  
+    		background-color: #BD00AD;  
+		}  
+		::-webkit-scrollbar-thumb:hover {  
+    		background-color: #ccc;  
+		}  
+    </style>
+
+	<title>Maker Studio</title>
+
+	<!-- JavaScript Libraries -->
+ 	<script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
+ 	<script type="text/javascript" src="http://web.arendelle.org/developer/marker.js"></script>
+
+ 	<!-- Icons -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="http://web.arendelle.org/public/apple-touch-icon-precomposed.png">
+    <link rel="shortcut icon" href="http://web.arendelle.org/public/favicon.ico">
+
+ 	<script type="text/javascript">
+ 		function load () {
+ 			var resultCode = mark($("#pad").val());
+			document.getElementById("preView").innerHTML = resultCode;
+			document.getElementById("codeView").innerHTML = resultCode.replace(/\</g,'&lt;').replace(/\>/g,'&gt;');
+			size();
+		}
+
+		function mark (text) {
+			var start_header = '<!-- [+] Marker.js ' + marker_version + ' : Code Block -->\n\n<pre><code>';
+			var end_header   = '</code></pre>\n\n<!-- [-] Marker.js ' + marker_version + ' : Code Block -->';
+			return start_header + highlight ( text ) + end_header ;
+		}
+
+		function size () {
+
+			document.getElementById("body").offsetHeight = document.getElementById("body").offsetHeight - 400;
+		}
+ 	</script>
+</head>
+
+<body style="margin:0;" onload="load()" onresize="size()" id="body">
+
+	<!-- Pad -->
+	<div style="float:left; width:35%; background-color: #fff; height:95vh;">
+		<div style="margin: 2%; height:98%; border: 1px solid #ccc; border-top: none; border-bottom: none; border-left: none;">
+
+			<img src="logo.png" style="height:24px;"><br>&nbsp;<br>
+
+			<!-- Input -->
+			<textarea id="pad" style="width:96%; height:84%; resize: none; border: none; font-family:Menlo; font-size:0.75rem; background-color: #fff; color: #BD00AD; outline: none;  outline-color: transparent; outline-style: none;">/* Marker Studio is an online playground for *
+ * Arendelle's marker.js. So you can see how *
+ * the engine works and what code it creates */
+
+// Simple string example:
+
+   "String interpolation example: \( @space / 23 )"
+
+// Simple code example
+
+   ( fibonacci , 1; 1 ) [ 198 ,
+
+      ( fibonacci[ @fibonacci? ] ,
+
+          @fibonacci[ @fibonacci? - 1 ] +
+          @fibonacci[ @fibonacci? - 2 ]
+
+   ) ] [ @fibonacci[ @fibonacci? - 1 ] , pr ]
+
+// done</textarea>
+
+
+    		<p style="font-family:monospace; color: #BD00AD;"><b>Marker</b>: <a style="color:#6200A8; text-decoration:none;" href="http://github.com/arendelle/marker.js">GitHub</a> &middot; <a style="color:#6200A8; text-decoration:none;" href="http://web.arendelle.org">Arendelle Project</a> &middot;  <a style="color:#6200A8; text-decoration:none;" href="http://web.arendelle.org/legal/marker-js/">Legal</a><br>Copyright 2015 <a href="http://kary.us/" style="color:#6200A8; text-decoration:none;">Pouya Kary</a>, All rights reserved.</p>
+		</div>
+	</div>
+
+
+	<!-- Results -->
+	<div style="float:left; width:65%; background-color:#fff; height: 100vh; font-family:monospace; overflow: scroll; overflow-x: hidden; overflow-y: hidden;">
+
+		<!-- Preview -->
+		<div style="height:70vh; overflow:scroll; border: 1px solid #ccc; border-top: none; border-right: none; border-left: none;">
+			<p id="preView" style="font-size:1.2rem; font-family: Menlo;"></p>
+		</div>
+
+		<!-- Sourse Code -->
+		<div style="height:28vh; overflow:scroll; overflow-x: hidden;"> 
+			<pre><code id="codeView" style="font-size:0.6rem; color: #6200A8; text-align: justify; text-justify: inter-word;"></code></pre>
+		</div>		
+
+	</div>
+
+	<div style="background-color: #eee; clear: both"></div>
+
+	<!-- Engine -->
+	<script>$("textarea").bind('input propertychange', function(){
+  
+  		var resultCode = mark($("#pad").val());
+		document.getElementById("preView").innerHTML = resultCode;
+		document.getElementById("codeView").innerHTML = resultCode.replace(/\</g,'&lt;').replace(/\>/g,'&gt;');
+
+	});</script>
+
+</body>
+</html>
