@@ -5,16 +5,6 @@
 
 <html>
 <head>
-
-	<script>
-      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-      ga('create', 'UA-58802140-1', 'auto');
-      ga('send', 'pageview');
-    </script>
-
 	<meta charset="UTF-8">
 
 	<!-- SEO -->
@@ -40,8 +30,8 @@
 	<title>Maker Studio</title>
 
 	<!-- JavaScript Libraries -->
- 	<script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
- 	<script type="text/javascript" src="http://web.arendelle.org/developer/marker.js"></script>
+ 	<script src="jquery-1.11.2.min.js"></script>
+ 	<script type="text/javascript" src="marker.js"></script>
 
  	<!-- Icons -->
     <link rel="apple-touch-icon-precomposed" sizes="144x144" href="http://web.arendelle.org/public/apple-touch-icon-precomposed.png">
@@ -58,7 +48,7 @@
 		function mark (text) {
 			var start_header = '<!-- [+] Marker.js ' + marker_version + ' : Code Block -->\n\n<pre><code>';
 			var end_header   = '</code></pre>\n\n<!-- [-] Marker.js ' + marker_version + ' : Code Block -->';
-			return start_header + highlight ( text ) + end_header ;
+			return start_header + markerHighlight ( text ) + end_header ;
 		}
 
 		function size () {
@@ -99,7 +89,7 @@
 // done</textarea>
 
 
-    		<p style="font-family:monospace; color: #BD00AD;"><b>Marker</b>: <a style="color:#6200A8; text-decoration:none;" href="http://github.com/arendelle/marker.js">GitHub</a> &middot; <a style="color:#6200A8; text-decoration:none;" href="http://web.arendelle.org">Arendelle Project</a> &middot;  <a style="color:#6200A8; text-decoration:none;" href="http://web.arendelle.org/legal/marker-js/">Legal</a><br>Copyright 2015 <a href="http://kary.us/" style="color:#6200A8; text-decoration:none;">Pouya Kary</a>, All rights reserved.</p>
+    		<p style="font-family:monospace; color: #BD00AD;"><b>Marker</b>: <a style="color:#6200A8; text-decoration:none;" href="http://github.com/arendelle/marker.js">GitHub</a> &middot; <a style="color:#6200A8; text-decoration:none;" href="http://kary.us/codes/marker/">Annotated Code</a> &middot;  <a style="color:#6200A8; text-decoration:none;" href="http://web.arendelle.org/legal/marker-js/">Legal</a><br>Copyright 2015 <a href="http://kary.us/" style="color:#6200A8; text-decoration:none;">Pouya Kary</a>, All rights reserved.</p>
 		</div>
 	</div>
 
