@@ -46,8 +46,8 @@
 		}
 
 		function mark (text) {
-			var start_header = '<!-- [+] Marker.js ' + marker_version + ' : Code Block -->\n\n<pre><code>';
-			var end_header   = '</code></pre>\n\n<!-- [-] Marker.js ' + marker_version + ' : Code Block -->';
+			var start_header = '<!-- [+] Marker.js ' + marker_version + ' : Code Block -->\n\n<pre>';
+			var end_header   = '</pre>\n\n<!-- [-] Marker.js ' + marker_version + ' : Code Block -->';
 			return start_header + markerHighlight ( text ) + end_header ;
 		}
 
