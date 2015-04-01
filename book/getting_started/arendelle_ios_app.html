@@ -4,7 +4,7 @@
     <head>
         
         <meta charset="UTF-8">
-        <title>Stored Spaces | </title>
+        <title>Arendelle iOS | </title>
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
         <meta name="generator" content="GitBook 1.0.3">
@@ -18,10 +18,10 @@
     
     
     
-    <link rel="next" href="../functions/README.html" />
+    <link rel="next" href="../hello,_world/README.html" />
     
     
-    <link rel="prev" href="../loops_again/README.html" />
+    <link rel="prev" href="../getting_started/arendelle_android_app.html" />
     
 
         
@@ -33,7 +33,7 @@
 
 
         
-    <div class="book"  data-level="13" data-basepath=".." data-revision="1427908704745">
+    <div class="book"  data-level="2.2" data-basepath=".." data-revision="1427908704745">
     
 
 <div class="book-summary">
@@ -114,7 +114,7 @@
         </li>
     
         
-        <li class="chapter " data-level="2.2" data-path="getting_started/arendelle_ios_app.html">
+        <li class="chapter active" data-level="2.2" data-path="getting_started/arendelle_ios_app.html">
             
                 
                     <a href="../getting_started/arendelle_ios_app.html">
@@ -295,7 +295,7 @@
         </li>
     
         
-        <li class="chapter active" data-level="13" data-path="stored_spaces/README.html">
+        <li class="chapter " data-level="13" data-path="stored_spaces/README.html">
             
                 
                     <a href="../stored_spaces/README.html">
@@ -495,73 +495,39 @@
                 <div class="page-inner">
                 
                 
-                    <section class="normal" id="section-gitbook_25">
+                    <section class="normal" id="section-gitbook_16">
                     
-                        <h1 id="stored-spaces">Stored Spaces</h1>
-<p>With Spaces you now can keep information in your app. However, when you exit the app… Its done! You’re information is dead! And you can’t do anything about it! You may wonder… When you open your computer it remembers your name and password! When you open your note apps all your notes are there… But how? It’s easy! We have two memories. As we have walked through this in the <strong>Spaces</strong> chapter we know this two memories are what. Actually as I’m typing this on January 2nd 2015 in the HP company the researchers are working on a new computer with one type of memory that does the both ( If its year 2200 and you’re still reading this book I’m sure you’re laughing… <em>“How could they use two memories! Why they even needed memories?? ha ha! their stuff used electricity! How old of them! WOW!”</em> - I’m not sure if you still use wow in 2200’s so forgive me).</p>
-<p>However, in Arendelle you have two kind of spaces. One is called <strong>Space</strong> and the other is called <strong>Stored Space</strong>. You know spaces, but you most certainly don’t know about Stored Spaces. When you create a stored space. Arendelle never keeps it in it’s short memory. Arendelle saves it as a file with <strong>.space</strong> format. So are you ready? We learn it very soon! Maybe in less than a second...</p>
-<p><br><br></p>
-<h2 id="arendelle-file-system">Arendelle File System</h2>
-<p>To create a stored space we use our good old space grammar with only one simple difference:</p>
-<!-- CLIFF HIGHLIGHTER 0.01 DEV GENERATED CODE BLOCK-->
-<pre style="font-family: Monospace;">
-<span style="color:#D60073">(</span>&nbsp;<span style="color:#4E00FC">$arendellePath</span>&nbsp;<span style="color:#D60073">,</span>&nbsp;expression&nbsp;<span style="color:#D60073">)</span>&nbsp;</pre>
-
-<!-- CLIFF HIGHLIGHTER 0.01 DEV GENERATED CODE BLOCK-->
-<p>So in the past you used <code>#</code> to call a source, <code>@</code> to call a space and from now on you’ll use <code>$</code> to call a stored space. Before this, we used no <code>@</code> in the space grammar because the space grammar itself knew it’s a space! However to make the space grammar understand that you’re editing not a regular space but a <strong>stored</strong> space. You have to use the <code>$</code> on the stored space’s name like :</p>
-<!-- CLIFF HIGHLIGHTER 0.01 DEV GENERATED CODE BLOCK-->
-<pre style="font-family: Monospace;">
-<span style="color:#D60073">(</span>&nbsp;<span style="color:#4E00FC">$storedSpace</span>&nbsp;<span style="color:#D60073">,</span>&nbsp;10&nbsp;<span style="color:#D60073">)</span>&nbsp;</pre>
-
-<!-- CLIFF HIGHLIGHTER 0.01 DEV GENERATED CODE BLOCK-->
-<p>But what happens when you do so? Where our <code>$storedSpace</code> saved? Every Arendelle blueprint is a file right? If you create an Arendelle blueprint and name it: <code>blueprint.arendelle</code> and write the following code on it:</p>
-<!-- CLIFF HIGHLIGHTER 0.01 DEV GENERATED CODE BLOCK-->
-<pre style="font-family: Monospace;">
-<span style="color:#D60073">(</span>&nbsp;<span style="color:#4E00FC">$myFirstStoredSpace</span>&nbsp;<span style="color:#D60073">,</span>&nbsp;10&nbsp;<span style="color:#D60073">)</span>&nbsp;</pre>
-
-<!-- CLIFF HIGHLIGHTER 0.01 DEV GENERATED CODE BLOCK-->
-<p>And you put it in a folder like this:</p>
-<p><img src="blueprint.png" style="width:8pc"></img>
-<br></p>
-<p>Now if you run the code and check out the folder again you will see this:</p>
-<p><br>
-<img src="blueprintAndStoredSpace.png" style="width:16pc"></img>
-<br></p>
-<p>Yes, As you see now you have a new file called <code>myFirstStoredSpace.space</code> in the same folder as your <code>blueprint.arendelle</code>. So you know that the file name will always be the the stored space’s name.</p>
-<p>So you can now use your stored space like this:</p>
-<!-- CLIFF HIGHLIGHTER 0.01 DEV GENERATED CODE BLOCK-->
-<pre style="font-family: Monospace;">
-<span style="color:#D60073">[</span>&nbsp;<span style="color:#4E00FC">$myFirstStoredSpace</span>&nbsp;<span style="color:#D60073">,</span>&nbsp;pr&nbsp;<span style="color:#D60073">]</span>&nbsp;</pre>
-
-<!-- CLIFF HIGHLIGHTER 0.01 DEV GENERATED CODE BLOCK-->
-<p>However, you should know that each time you call the <code>$myFirstStoredSpace</code>, Arendelle loads it from your file not it’s memory and it’s fast enough that you don’t have to worry about it. But something cool is you can create a folder in the directory you have your <code>blueprint.arendelle</code> on it and then this way to access that folder. Imagine this:</p>
-<p><br><center>
-<img src="blueprintAndStoredSpaceAndFolder.png" style="width:23pc"></img>
-<br></center><br></p>
-<p>To save a stored space in the our <code>folder</code> directory we should use Arendelle File System. In Arendelle, the folder that your main blueprint is on it is the root folder. When you use <code>$stored</code> the <code>stored.space</code> file will be saved in the same folder as your main <code>blueprint.arendelle</code> file. so now if you put the <code>folder</code> on this folder like the image. You should use prepend your <code>$stored</code> with the <code>folder.</code> to save the <code>stored.space</code> to the folder. Imagine you’re going to save the <code>storedSpace.space</code> on the <code>folder</code> you should write this code:</p>
-<!-- CLIFF HIGHLIGHTER 0.01 DEV GENERATED CODE BLOCK-->
-<pre style="font-family: Monospace;">
-<span style="color:#D60073">(</span>&nbsp;<span style="color:#4E00FC">$folder.storedSpace</span>&nbsp;<span style="color:#D60073">,</span>&nbsp;10&nbsp;<span style="color:#D60073">)</span></pre>
-
-<!-- CLIFF HIGHLIGHTER 0.01 DEV GENERATED CODE BLOCK-->
-<p>As you know this system works like this:</p>
-<p><br></p>
-<p><center><img src="arendellePath.png" style="width:26pc"></img>
-</center><br><br>
-The dot in this stored space name is called <strong>Path Separator</strong> which is used to make directories. What you write in the right side of the Path Separator is a file or folder in the folder that you create in the left side of the Path Separator. So when you write <code>folder1.folder2.file</code> the <code>file</code> is in the <code>folder2</code> and <code>folder2</code> is in the <code>folder1</code>.</p>
-<p>So if we change the code of our <code>blueprint.arendelle</code> to this:</p>
-<!-- CLIFF HIGHLIGHTER 0.01 DEV GENERATED CODE BLOCK-->
-<pre style="font-family: Monospace;">
-<span style="color:#D60073">(</span>&nbsp;<span style="color:#4E00FC">$folder.storedSpace</span>&nbsp;<span style="color:#D60073">,</span>&nbsp;10&nbsp;<span style="color:#D60073">)</span>&nbsp;</pre>
-
-<!-- CLIFF HIGHLIGHTER 0.01 DEV GENERATED CODE BLOCK-->
-<p>The result will be like this:</p>
-<p><center><img src="folder.storedSpace.png" style="width:26pc"></img>
+                        <h1 id="arendelle-ios">Arendelle iOS</h1>
+<p>Arendelle iOS is our most beautiful Arendelle experience you may imagine! Designed from ground up we have created the most awesome experience based on the latest technologies from Apple so you get the most of your device. You can download iOS app from Appstore on your iPhone, iPad and iPod touches.<br><br></p>
+<p><center><img src="ios/welcome.png" style="width:19pc"></img>
 </center><br></p>
-<p>As you see we have the <code>storedSpace.space</code> saved on our <code>folder</code> directory. You can manage your spaces like this with folders. And remember that you have to create the folders yourself and Arendelle won’t create them for you.</p>
-<p><br><br></p>
-<h2 id="where-are-we-going-with-this">Where are we going with this?</h2>
-<p>Actually, you can do so much with stored spaces. But for me the important part of learning the stored spaces was to tech you the <strong>Arendelle File System</strong> which we’ll use in the next chapter: <strong>Functions</strong> and the Arendelle File System is so important there. So no exercise here, let’s just learn Functions!</p>
+<p>When you download Arendelle on your Android phone for the first time you see this “Welcome” page. If you read the page you’ll learn the five basic commands which we will also cover in this book. However, after this page you will get into the gallery. The gallery is the list of your projects like this:</p>
+<p><center><img src="ios/fullGallery.png" style="width:19pc"></img>
+</center><br></p>
+<p>In this screen you can view and manage all your Arendelle projects. In the bar of this page you have two buttons.</p>
+<p>By tapping on the <strong>plus</strong> button you can create a new project. To create a project you have to name two things. <strong>Project’s Name</strong> and <strong>Project’s Main Function</strong>:</p>
+<p><br></p>
+<p><center><img src="ios/newProject.png" style="width:19pc;"></img>
+</center><br></p>
+<p>So let’s create a new project and call it “Glider”:</p>
+<p><br></p>
+<p><center><img src="ios/newProjectFilled.png" style="width:19pc;"></img>
+</center><br></p>
+<p>When you created a project you will get into the <strong>Editor</strong> which is where you edit your codes. Editor has some tools like this:</p>
+<p><center><img src="ios/editor.png" style="width:31pc;"></img>
+</center><br></p>
+<p>All the tools you may need to edit your code is here in Editor. In the title bar you can see the name of the function you’re editing which is not really important right now! The pretty pink colored “Run Button” starts to run your codes.</p>
+<p>Something that is super helpful when you’re coding is the “Shortkey Bar”. Arendelle codes are full of special-characters like <code>[</code> , <code>,</code> and <code>]</code> which you use the most. We have all of them sorted by how much they are used in the Shortkey bar. You can scroll it to see all the characters you have there.</p>
+<p>Something else in Editor is the drawer menu that has all the Functions and Project Settings on it like this:<br><br></p>
+<p><center><img src="ios/functionMenu.png" style="width:19pc;"></img>
+</center><br></p>
+<p>In the <strong>Project Settings</strong> page you can choose the main function which we will talk later about but also you get to choose the color plate you want for your code. You will learn that Arendelle codes are based on four colors and a background. You can choose color themes for that there. So When you write a code like <code>rprdpdplplp</code> as you learned in the welcome of Arendelle you see a page called <strong>Result Screen</strong> which looks like this:<br></p>
+<p><center><img src="ios/resultScreen.png" style="width:31pc;"></img>
+</center><br></p>
+<p>In Arendelle you can change titles. In Android it’s possible. You can change the Blueprint’s title anytime with a command you’ll learn soon. The <strong>Result Screen</strong> also comes with some tools. One is <strong>Runtime</strong>. It’s a number in <strong>milliseconds</strong> which tells you how long it does take to run your blueprint. It’s a very very important tool to write Arendelle codes. You always have to write code in a way that your code run as fast as possible.</p>
+<p>We also have two buttons in the bar. One is for sharing your result which reports your result to a kind and happy PNG picture and then shows you a list of application which you can share your result on them. The other button is the <strong>Run Again</strong> button which you can use to re-run your Arendelle blueprint. It’s handy when you write random based codes which each time you run you get another result. That’s all with Arendelle Android! You’re now a master in knowing everything about it! You can do so much amazing things on this app. Look at this for example:<br><br></p>
+<p><center><img src="ios/10printColored.png" style="width:19pc;"></img>
+</center><br></p>
 
                     
                     </section>
@@ -572,10 +538,10 @@ The dot in this stored space name is called <strong>Path Separator</strong> whic
         </div>
 
         
-        <a href="../loops_again/README.html" class="navigation navigation-prev " aria-label="Previous page: Loops again!"><i class="fa fa-angle-left"></i></a>
+        <a href="../getting_started/arendelle_android_app.html" class="navigation navigation-prev " aria-label="Previous page: Arendelle Android"><i class="fa fa-angle-left"></i></a>
         
         
-        <a href="../functions/README.html" class="navigation navigation-next " aria-label="Next page: Functions"><i class="fa fa-angle-right"></i></a>
+        <a href="../hello,_world/README.html" class="navigation navigation-next " aria-label="Next page: Hello, World!"><i class="fa fa-angle-right"></i></a>
         
     </div>
 </div>
