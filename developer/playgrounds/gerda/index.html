@@ -1,66 +1,9 @@
+<!DOCTYPE html>
 <html>
-	<head>
-		<title>Gerda Playground</title>
-		<script src="scripts/gerda.js" type="text/javascript"></script>
-		<link rel="stylesheet" href="styles/ui.css">
-		<script>
-			function arrayToString ( spaces ) {
-				var results = "";
-				spaces.forEach ( function ( space ) {
-					results += '<div class="item">@' + space + '</div>';
-				});
-				return results;
-			}
-			function updateSuggestions () {
-				// Informatin we need
-				var pad = document.getElementById ( "pad" );
-				var display = document.getElementById ( "display" );
-				var caret_location = pad.selectionStart;
-				// Evaluatings
-				var suggestions = Gerda.Kernel.GetSpaces ( pad.value , caret_location );
-				display.innerHTML = arrayToString ( suggestions );
-			}
-		</script>
-	</head>
-	<body onload="updateSuggestions( )">
-		<header>
-			<div class="gerda-header-name">
-				<span style="font-size: 24.0px; color: #ccc;">
-					<span id="logo-title">
-						Gerda Playground
-					</span>
-				</span>
-			</div>
-			<div class="kary-header-logo">
-				<img src="kf-logo.png" width="200px;">
-			</div>
-		</header>
-		<div>
-			<div class="half">
-				<center>
-					<textarea id="pad" onkeydown="updateSuggestions( )" onkeypress="updateSuggestions( )" onfocus="updateSuggestions( )" onclick="updateSuggestions( )" ondragend="updateSuggestions( )">< something , somethingelse >
+<head>
+	<meta http-equiv="refresh" content="0; url=http://www.karyfoundation.org/research/playgrounds/gerda/" />
+</head>
+<body>
 
-( space1 , 10 )
-
-[ 1000 , 
-
-    ( something , 34 ) 
-
-    ( something   else , 34 )
-
-]
-
-( a , 3 ) ( b , 42 ) 
-
-( d , 10 )</textarea>
-				</center>
-			</div>
-			<div class="half">
-				<center>
-					<div id="display"></div>
-					<div style="clear: both;"></div>
-				</center>
-			</div>
-		</div>
-	</body>
+</body>
 </html>
